@@ -10,10 +10,10 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 
 @RestController
-public class DemoController
+public class SilverStripeStubController
 {
     @GetMapping("/v1/identity/users/migration/skinny-mobile/stevenli00106@gmail.com/byemail")
-    public String checkHealthLiveness(@RequestHeader("x-silverstripe-api-key") String key)
+    public String fetchIdentityByEmail(@RequestHeader("x-silverstripe-api-key") String key)
     {
         ClassLoader classLoader = getClass().getClassLoader();
         String json = "";
